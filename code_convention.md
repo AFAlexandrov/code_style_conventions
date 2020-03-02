@@ -31,17 +31,17 @@ All code files contain licensing information.
 
 -- Все константы пишутся черед CAPS , используя нижнее подчеркивание для названия ,состоящего из нескольких слов
 
-`#define SOME_CONST_VAL 5`
+		#define SOME_CONST_VAL 5
 
 --Длинные константные выражения (переносятся на следующую строку)// больше скольки символов считается длинным константным выражением (указать)
 
-`#define SOME_LONG_CONST_DEFINITION ( \
-	(SOME_CONST_VAL + 7) / 3.1415926 \
-)`// как должен выглядеть этот пример?
+		#define SOME_LONG_CONST_DEFINITION ( \
+			(SOME_CONST_VAL + 7) / 3.1415926 \
+		)// как должен выглядеть этот пример?
 
 --Макросы, содержащие присваивание (начинаются с большой буквы, с круглыми скобками, без ";" в конце строки )
 
-`#define Reset_some_value() some_value = 0`
+		#define Reset_some_value() some_value = 0
 
 --Макросы, содержащие объявление/инициализацию
 
@@ -52,9 +52,9 @@ All code files contain licensing information.
 
 --Макросы с параметрами\\ и что?
 
-`#define Power_of_two(power) pow(2, (power))
- #define Ring_push_message(ring, source, len) \
-  (ring)->push_message((ring), (source), (len))`
+		#define Power_of_two(power) pow(2, (power))
+ 		#define Ring_push_message(ring, source, len) \
+  		(ring)->push_message((ring), (source), (len))
 
 --Условная компиляция (в разработке...)
 ==ТИПЫ ДАННЫХ==
@@ -62,32 +62,32 @@ All code files contain licensing information.
 
 --Один идентификатор
 
-	`char name = '\0';`
+			char name = '\0';
 
 --Несколько идентификаторов пишутся через запятую на следующей строке, ( идентификатор под идентификатором)
 
-	`char
-		name_1 = '\0',
-		name_2 = '\0';
-	int
-		num_1 = 0,
-		num_2 = 0;`
+			char
+				name_1 = '\0',
+				name_2 = '\0';
+			int
+				num_1 = 0,
+				num_2 = 0;`
 
 ###### ++Производные++ 
 
 --Массивы
 //--Один идентификатор
-	`char string [STRING_SIZE] = {'\0'};`
+			char string [STRING_SIZE] = {'\0'};	
 //--Несколько идентификаторов пишутся через запятую на следующей строке, ( идентификатор под идентификатором)
 
-	`uint8_t
-		input_buffer [IN_BUF_SIZE] = {0},
-		output_buffer [OUT_BUF_SIZE] = {0};`
+			uint8_t
+				input_buffer [IN_BUF_SIZE] = {0},
+				output_buffer [OUT_BUF_SIZE] = {0};`
 
 --Указатели (пробелы с обеих сторон от "*")// по одному пробелу с каждой стороны
 //--Один идентификатор
-	`uint32_t * ptr = NULL;`
-	`long long double *** surface_matrix = NULL;`
+			`uint32_t * ptr = NULL;
+			long long double *** surface_matrix = NULL;`
 //--Несколько идентификаторов
 	`uint16_t
 		* window = NULL,
