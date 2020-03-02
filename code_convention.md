@@ -1,14 +1,22 @@
 # Конвенции
 **1. Основная информация : Лицензия,компилятор,язык,opensource**
+
+
 **2. Блоки и библиотеки// добавить подпункты и уже от них будут идти главы**
+    
     *2.1 Объявления,инициализация*
+    
     *2.2 Типы данных*
       *~Базовые*
       *~Производные*
       *~Пользовательские*
+      
 **3. Тесты**
+
 **4. Правила оформления кода**
+
 **5. Именование**
+
 **6. Комментарии**
 Оптимальная длина строки не более 50 символов (максимум 80)// почему это тут и к чему это
 ***
@@ -81,9 +89,9 @@ All code files contain licensing information.
 	`uint32_t * ptr = NULL;`
 	`long long double *** surface_matrix = NULL;`
 //--Несколько идентификаторов
-	`uint16_t`
-		`* window = NULL,`
-		`coef_table = NULL;`
+	`uint16_t
+		* window = NULL,
+		coef_table = NULL;`
 
 	`void (* action) (void);`// что поясняет этот пример
 
@@ -91,27 +99,27 @@ All code files contain licensing information.
 
 --Функции
 
-`void _push_byte (ring_t * ring, uint8_t byte);`// все примеры вызывают вопросы, нужно пояснение
+		void _push_byte (ring_t * ring, uint8_t byte);// все примеры вызывают вопросы, нужно пояснение
 
-`dbase_record_t * parser_command_dbase (void);
-char * extract_pattern (
-	char * message,
-	uint16_t from_here,
-	uint16_t cmd_len
-);`
+		dbase_record_t * parser_command_dbase (void);
+		char * extract_pattern (
+		char * message,
+			uint16_t from_here,
+			uint16_t cmd_len
+		);
 
 ###### ++Пользовательские++ 
 
 --структуры // что именно мы говорим про оформление структур
 
-  `struct parser_record {
-	char
-		* command,
-		* response
-		* parameter;
-	void (* action) (void);
-	struct parser_record * subcommand;
-}`
+  		struct parser_record {
+			char
+				* command,
+				* response
+				* parameter;
+			void (* action) (void);
+			struct parser_record * subcommand;
+		}
 
 --объединения
 --перечисления
