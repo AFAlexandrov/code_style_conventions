@@ -2,15 +2,20 @@
 **1. General: License,compiler,language,opensource**
 
 **2. Blocks and libraries
+
  *2.1 Declaration,initialisation*
- *2.2 Data types*
+
+*2.2 Data types*
     *~Basic*
     *~Derivative*
     *~Users'*
 
 **3. Tests**
+
 **4. The rules of code formalization **
+
 **5. Naming**
+
 **6. Comments**
 
 ***
@@ -46,9 +51,9 @@ All code files contain licensing information.
 
 --Macros with parametrs\\ и что?
 
-`#define Power_of_two(power) pow(2, (power))
- #define Ring_push_message(ring, source, len) \
-  (ring)->push_message((ring), (source), (len))`
+	#define Power_of_two(power) pow(2, (power))
+ 	#define Ring_push_message(ring, source, len) \
+  	(ring)->push_message((ring), (source), (len))
 
 --Conditional compilation 
 ==DATA TYPES==
@@ -60,12 +65,12 @@ All code files contain licensing information.
 
 --Several identifiers are written with comma on the following line, ( identifier under the indentifier
 
-	`char
+	char
 		name_1 = '\0',
 		name_2 = '\0';
 	int
 		num_1 = 0,
-		num_2 = 0;`
+		num_2 = 0;
 
 ###### ++Derivative++ 
 
@@ -74,9 +79,9 @@ All code files contain licensing information.
 	`char string [STRING_SIZE] = {'\0'};`
 --Several identifiers are written with comma on the following line, ( identifier under the indentifier
 
-	`uint8_t
+	 uint8_t
 		input_buffer [IN_BUF_SIZE] = {0},
-		output_buffer [OUT_BUF_SIZE] = {0};`
+		output_buffer [OUT_BUF_SIZE] = {0};
 
 --Pointers (spaces at the both sides of "*")// using one space for the each side
 //--One identifier
@@ -93,27 +98,27 @@ All code files contain licensing information.
 
 --Functions
 
-`void _push_byte (ring_t * ring, uint8_t byte);`
+	void _push_byte (ring_t * ring, uint8_t byte);
 
-`dbase_record_t * parser_command_dbase (void);
-char * extract_pattern (
-	char * message,
+	dbase_record_t * parser_command_dbase (void);
+		char * extract_pattern (
+		char * message,
 	uint16_t from_here,
 	uint16_t cmd_len
-);`
+	);
 
 ###### ++Users'++ 
 
 --Structures
 
-  `struct parser_record {
+  	struct parser_record {
 	char
 		* command,
 		* response
 		* parameter;
 	void (* action) (void);
 	struct parser_record * subcommand;
-}`
+	}
 
 --Unions
 --Enums
