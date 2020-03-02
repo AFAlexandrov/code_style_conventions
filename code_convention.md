@@ -1,14 +1,22 @@
 # Конвенции
 **1. Основная информация : Лицензия,компилятор,язык,opensource**
+
+
 **2. Блоки и библиотеки// добавить подпункты и уже от них будут идти главы**
+    
     *2.1 Объявления,инициализация*
+    
     *2.2 Типы данных*
       *~Базовые*
       *~Производные*
       *~Пользовательские*
+      
 **3. Тесты**
+
 **4. Правила оформления кода**
+
 **5. Именование**
+
 **6. Комментарии**
 Оптимальная длина строки не более 50 символов (максимум 80)// почему это тут и к чему это
 ***
@@ -23,17 +31,17 @@ All code files contain licensing information.
 
 -- Все константы пишутся черед CAPS , используя нижнее подчеркивание для названия ,состоящего из нескольких слов
 
-`#define SOME_CONST_VAL 5`
+		#define SOME_CONST_VAL 5
 
 --Длинные константные выражения (переносятся на следующую строку)// больше скольки символов считается длинным константным выражением (указать)
 
-`#define SOME_LONG_CONST_DEFINITION ( \
-	(SOME_CONST_VAL + 7) / 3.1415926 \
-)`// как должен выглядеть этот пример?
+		#define SOME_LONG_CONST_DEFINITION ( \
+			(SOME_CONST_VAL + 7) / 3.1415926 \
+		)// как должен выглядеть этот пример?
 
 --Макросы, содержащие присваивание (начинаются с большой буквы, с круглыми скобками, без ";" в конце строки )
 
-`#define Reset_some_value() some_value = 0`
+		#define Reset_some_value() some_value = 0
 
 --Макросы, содержащие объявление/инициализацию
 
@@ -44,9 +52,9 @@ All code files contain licensing information.
 
 --Макросы с параметрами\\ и что?
 
-`#define Power_of_two(power) pow(2, (power))
- #define Ring_push_message(ring, source, len) \
-  (ring)->push_message((ring), (source), (len))`
+		#define Power_of_two(power) pow(2, (power))
+ 		#define Ring_push_message(ring, source, len) \
+  		(ring)->push_message((ring), (source), (len))
 
 --Условная компиляция (в разработке...)
 ==ТИПЫ ДАННЫХ==
@@ -54,36 +62,36 @@ All code files contain licensing information.
 
 --Один идентификатор
 
-	`char name = '\0';`
+			char name = '\0';
 
 --Несколько идентификаторов пишутся через запятую на следующей строке, ( идентификатор под идентификатором)
 
-	`char
-		name_1 = '\0',
-		name_2 = '\0';
-	int
-		num_1 = 0,
-		num_2 = 0;`
+			char
+				name_1 = '\0',
+				name_2 = '\0';
+			int
+				num_1 = 0,
+				num_2 = 0;`
 
 ###### ++Производные++ 
 
 --Массивы
 //--Один идентификатор
-	`char string [STRING_SIZE] = {'\0'};`
+			char string [STRING_SIZE] = {'\0'};	
 //--Несколько идентификаторов пишутся через запятую на следующей строке, ( идентификатор под идентификатором)
 
-	`uint8_t
-		input_buffer [IN_BUF_SIZE] = {0},
-		output_buffer [OUT_BUF_SIZE] = {0};`
+			uint8_t
+				input_buffer [IN_BUF_SIZE] = {0},
+				output_buffer [OUT_BUF_SIZE] = {0};`
 
 --Указатели (пробелы с обеих сторон от "*")// по одному пробелу с каждой стороны
 //--Один идентификатор
-	`uint32_t * ptr = NULL;`
-	`long long double *** surface_matrix = NULL;`
+			`uint32_t * ptr = NULL;
+			long long double *** surface_matrix = NULL;`
 //--Несколько идентификаторов
-	`uint16_t`
-		`* window = NULL,`
-		`coef_table = NULL;`
+	`uint16_t
+		* window = NULL,
+		coef_table = NULL;`
 
 	`void (* action) (void);`// что поясняет этот пример
 
@@ -91,27 +99,27 @@ All code files contain licensing information.
 
 --Функции
 
-`void _push_byte (ring_t * ring, uint8_t byte);`// все примеры вызывают вопросы, нужно пояснение
+		void _push_byte (ring_t * ring, uint8_t byte);// все примеры вызывают вопросы, нужно пояснение
 
-`dbase_record_t * parser_command_dbase (void);
-char * extract_pattern (
-	char * message,
-	uint16_t from_here,
-	uint16_t cmd_len
-);`
+		dbase_record_t * parser_command_dbase (void);
+		char * extract_pattern (
+		char * message,
+			uint16_t from_here,
+			uint16_t cmd_len
+		);
 
 ###### ++Пользовательские++ 
 
 --структуры // что именно мы говорим про оформление структур
 
-  `struct parser_record {
-	char
-		* command,
-		* response
-		* parameter;
-	void (* action) (void);
-	struct parser_record * subcommand;
-}`
+  		struct parser_record {
+			char
+				* command,
+				* response
+				* parameter;
+			void (* action) (void);
+			struct parser_record * subcommand;
+		}
 
 --объединения
 --перечисления
