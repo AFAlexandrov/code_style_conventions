@@ -1,7 +1,7 @@
 # Conventions
 **1. General: License,compiler,language,opensource**
 
-**2. Blocks and libraries
+**2. Blocks and libraries**
 
  *2.1 Declaration,initialisation*
 
@@ -10,9 +10,10 @@
     *~Derivative*
     *~Users'*
 
+
 **3. Tests**
 
-**4. The rules of code formalization **
+**4. The rules of code formalization**
 
 **5. Naming**
 
@@ -20,9 +21,12 @@
 
 ***
 ## **1.General**
+
+
 This code is licensed under the GNU Lesser General Public License (LGPL) version 3 as published by the Free Software Foundation.
 It is possible to link closed-source code with the LGPL code.
 All code files contain licensing information.
+
 ---
 ## **2.Blocks and libraries**
 ==DECLARATION, INITIALISATION==
@@ -49,7 +53,7 @@ All code files contain licensing information.
 			__VA_ARGS__, list_terminator \
 		}
 
---Macros with parametrs\\ и что?
+--Macros with parametrs
 
 	#define Power_of_two(power) pow(2, (power))
  	#define Ring_push_message(ring, source, len) \
