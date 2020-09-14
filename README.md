@@ -188,7 +188,7 @@ TODO // оформит через plantUML
 		
 		void _push_byte (ring_t * ring, uint8_t byte);
 		
- Функции открытого интерфейса:
+ Функции открытого интерфейса начинаются с имени блока, интерфейсом которого являются:
 		
 		dbase_record_t * parser_command_dbase (void);
 	
